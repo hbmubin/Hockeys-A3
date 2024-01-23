@@ -38,16 +38,19 @@
         font-family: "Manrope", sans-serif;
       }
       .line-b {
-        border-bottom: 1px dashed #3333336d;
+        border-bottom: 1px dashed #7d7d7d3b;
       }
       .line-t {
-        border-top: 1px dashed #3333336d;
+        border-top: 1px dashed #7d7d7d3b;
+      }
+      .progressOpacity::before {
+        opacity: 0.5 !important;
       }
     </style>
   </head>
   <body class="manrope">
     <header>
-      <div class="xl:w-[1170px] lg:mx-auto">
+      <div class="xl:w-[1170px] lg:mx-auto relative">
         <!-- NAV SECTION -->
         <nav class="navbar bg-base-100">
           <div class="navbar-start">
@@ -127,7 +130,9 @@
                 />
               </svg>
             </button>
-            <a class="btn py-4 px-6 bgPrimary text-white">Get Ticket</a>
+            <a class="btn py-4 px-6 bgPrimary text-white border-none"
+              >Get Ticket</a
+            >
           </div>
         </nav>
         <!-- HERO SECTION -->
@@ -162,17 +167,17 @@
               >
             </div>
           </div>
-          <div
-            class="heroContent absolute bottom-5 right-5 p-8 rounded-2xl bg-black"
-          >
-            <h2 class="text-white text-2xl font-bold">
-              Meet all the heroes from the field
-            </h2>
-            <p class="text-slate-500 mt-4">
-              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
-              <br />turpis placerat dolor. Purus urna in sit nullam proin.
-            </p>
-          </div>
+        </div>
+        <div
+          class="heroContent absolute bottom-5 right-5 p-8 rounded-2xl bg-black"
+        >
+          <h2 class="text-white text-2xl font-bold">
+            Meet all the heroes from the field
+          </h2>
+          <p class="text-slate-500 mt-4">
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            <br />turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
         </div>
       </div>
     </header>
@@ -192,22 +197,246 @@
               dolor. Purus urna in sit nullam proin.
             </p>
           </div>
-          <div class="progressBoxContainar flex justify-around">
+          <div class="progressBoxContainer flex justify-around pt-12">
             <div
-              class="radial-progress primary"
+              class="radial-progress primary scale-150"
+              style="--value: 87"
+              role="progressbar"
+            >
+              <span class="text-black font-extrabold scale-110"> 87%</span>
+            </div>
+            <div
+              class="radial-progress text-[#49D293] scale-150"
+              style="--value: 95"
+              role="progressbar"
+            >
+              <span class="text-black font-extrabold scale-110"> 95%</span>
+            </div>
+            <div
+              class="radial-progress text-orange-400 scale-150"
+              style="--value: 90"
+              role="progressbar"
+            >
+              <span class="text-black font-extrabold scale-110"> 90%</span>
+            </div>
+            <div
+              class="radial-progress text-[#4C8DF1] scale-150"
               style="--value: 80"
               role="progressbar"
             >
-              <span class="text-black font-extrabold"> 20%</span>
+              <span class="text-black font-extrabold scale-110"> 80%</span>
             </div>
-            <div class="radial-progress" style="--value: 90" role="progressbar">
-              60%
+          </div>
+          <div
+            class="progressContent flex text-center justify-around pb-24 line-b"
+          >
+            <div>
+              <h2 class="font-bold text-2xl pt-10 pb-4">Prayer Facility</h2>
+              <p class="text-slate-500">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
             </div>
-            <div class="radial-progress" style="--value: 80" role="progressbar">
-              80%
+            <div>
+              <h2 class="font-bold text-2xl pt-10 pb-4">Experienced Coach</h2>
+              <p class="text-slate-500">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
             </div>
-            <div class="radial-progress" style="--value: 70" role="progressbar">
-              100%
+            <div>
+              <h2 class="font-bold text-2xl pt-10 pb-4">Senior Player</h2>
+              <p class="text-slate-500">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+            <div>
+              <h2 class="font-bold text-2xl pt-10 pb-4">Training Ground</h2>
+              <p class="text-slate-500">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROGRAM SECTION -->
+      <section class="programSection">
+        <div class="programContainer xl:w-[1170px] lg:mx-auto">
+          <div class="programHeader text-center py-8 line-b">
+            <h2 class="font-bold text-3xl mb-6">Program Sections</h2>
+            <p class="w-7/12 mx-auto text-slate-500">
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+          <div
+            class="programCardContainer pt-12 pb-24 line-b grid grid-cols-2 gap-6"
+          >
+            <div
+              class="card bg-base-100 shadow-xl image-full h-[340px] progressOpacity"
+            >
+              <figure>
+                <img class="w-full" src="/Images/2.png" alt="Shoes" />
+              </figure>
+              <div class="card-body justify-center gap-5">
+                <h2 class="card-title text-white text-2xl">Junior Program</h2>
+                <p class="flex-grow-0">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="text-left">
+                  <a
+                    class="btn py-3 px-6 bgPrimary text-white border-none text-lg"
+                    >Register Now!</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="card bg-base-100 shadow-xl image-full h-[340px] progressOpacity"
+            >
+              <figure>
+                <img class="w-full" src="/Images/3.png" alt="Shoes" />
+              </figure>
+              <div class="card-body justify-center gap-5">
+                <h2 class="card-title text-white text-2xl">Teenager Program</h2>
+                <p class="flex-grow-0">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="text-left">
+                  <a
+                    class="btn py-3 px-6 bgPrimary text-white border-none text-lg"
+                    >Register Now!</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="card bg-base-500 shadow-xl image-full col-span-2 h-[450px] progressOpacity"
+            >
+              <figure>
+                <img class="w-full" src="/Images/4.png" alt="Shoes" />
+              </figure>
+              <div class="card-body justify-center gap-5">
+                <h2 class="card-title text-white text-2xl">
+                  Professional Program
+                </h2>
+                <p class="flex-grow-0 w-3/5">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit enim sagittis turpis in magna. Id et sed euismod natoque
+                  amet nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button class="text-left">
+                  <a
+                    class="btn py-3 px-6 bgPrimary text-white border-none text-lg"
+                    >Register Now!</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCT SECTION -->
+      <section class="productSection">
+        <div class="productContainer xl:w-[1170px] lg:mx-auto">
+          <div class="productHeader text-center py-8 line-b">
+            <h2 class="font-bold text-3xl mb-6">Program Sections</h2>
+            <p class="w-7/12 mx-auto text-slate-500">
+              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+              turpis placerat dolor. Purus urna in sit nullam proin.
+            </p>
+          </div>
+          <div class="productContainer grid grid-cols-2 gap-6">
+            <div class="card h-56 w-auto bg-base-100 border-2 p-6 flex flex-row">
+              <div class="productCardImage">
+                <img src="/Images/5.png" alt="" />
+              </div>
+              <div class="productCardContent">
+                <h2>World Cup Flags Football</h2>
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+              </div>
+            </div>
+            <div class="card w-auto bg-base-100 border-2">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-auto bg-base-100 border-2">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-auto bg-base-100 border-2">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-auto bg-base-100 border-2">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card w-auto bg-base-100 border-2">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
