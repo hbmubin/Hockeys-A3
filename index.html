@@ -53,6 +53,9 @@
       p {
         color: #7b7b7b;
       }
+      .programCardContainer p{
+        color: #f2f2f2;
+      }
     </style>
   </head>
   <body class="manrope">
@@ -699,7 +702,7 @@
             </p>
           </div>
           <div class="getInMiddleContainer mt-12 flex md:flex-row flex-col">
-            <div class="leftContact grid gap-6 p-12 border-[1px] rounded-lg">
+            <div class="leftContact grid gap-6 md:p-12 p-6 border-[1px] rounded-lg">
               <div
                 class="contactCard h-56 md:w-96 bg-[#bced6d27] rounded-lg p-6 grid items-center"
               >
@@ -728,7 +731,7 @@
                 </div>
               </div>
             </div>
-            <form class="rightForm grid md:grid-cols-2 md:flex-1 ml-6 gap-6">
+            <form class="rightForm md:grid md:grid-cols-2 md:flex-1 flex flex-col md:ml-6 gap-6 mt-6 md:mt-0 ">
               <div class="">
                 <label for="name" class="font-bold text-xl">Your Name</label
                 ><br />
@@ -783,7 +786,7 @@
                 ></textarea>
               </div>
               <a
-                class="btn py-3 px-6 bgPrimary text-white border-none text-lg col-span-2"
+                class="btn py-3 px-6 bgPrimary text-white border-none text-lg col-span-2 md:mt-0 mt-4"
                 >Register Now!</a
               >
             </form>
@@ -811,11 +814,11 @@
     <!-- FOOTER SECTION -->
     <footer class="py-24 bg-[#131318] text-white">
       <div
-        class="footerContainer xl:w-[1170px] lg:mx-auto flex justify-between"
+        class="footerContainer xl:w-[1170px] w-11/12 mx-auto md:flex md:justify-between text-center md:text-left grid grid-cols-2"
       >
-        <div class="">
+        <div class="col-span-2 pb-10 md:pb-0">
           <h2 class="text-3xl font-extrabold">Get In Touch</h2>
-          <p class="w-[340px] text-slate-400 mt-4 mb-6">
+          <p class="md:w-[340px] text-slate-400 mt-4 mb-6">
             Dit amet consectetur. Condimentum adipiscing aliquam turpis placerat
             dolor. Purus urna in sit nullam proin.
           </p>
@@ -863,7 +866,7 @@
             <li>Contact Us</li>
           </ul>
         </div>
-        <div>
+        <div class="col-span-2 pt-10 md:pt-0">
           <h2 class="text-lg font-bold mb-7">Company</h2>
           <ul>
             <li>Academy</li>
